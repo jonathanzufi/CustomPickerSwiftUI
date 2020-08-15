@@ -13,6 +13,7 @@
 		20C843B224E773C7002A2FDE /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 20C843B124E773C7002A2FDE /* Preview Assets.xcassets */; };
 		20C843BD24E773C7002A2FDE /* CustomPickerSwiftUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 20C843BC24E773C7002A2FDE /* CustomPickerSwiftUITests.swift */; };
 		20C843C824E773C7002A2FDE /* CustomPickerSwiftUIUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 20C843C724E773C7002A2FDE /* CustomPickerSwiftUIUITests.swift */; };
+		20C843D624E773E4002A2FDE /* CustomPickerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 20C843D524E773E4002A2FDE /* CustomPickerView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -45,6 +46,7 @@
 		20C843C324E773C7002A2FDE /* CustomPickerSwiftUIUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = CustomPickerSwiftUIUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		20C843C724E773C7002A2FDE /* CustomPickerSwiftUIUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomPickerSwiftUIUITests.swift; sourceTree = "<group>"; };
 		20C843C924E773C7002A2FDE /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		20C843D524E773E4002A2FDE /* CustomPickerView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CustomPickerView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -97,6 +99,7 @@
 			children = (
 				20C843AA24E773C6002A2FDE /* CustomPickerSwiftUIApp.swift */,
 				20C843AC24E773C6002A2FDE /* ContentView.swift */,
+				20C843D524E773E4002A2FDE /* CustomPickerView.swift */,
 				20C843AE24E773C7002A2FDE /* Assets.xcassets */,
 				20C843B324E773C7002A2FDE /* Info.plist */,
 				20C843B024E773C7002A2FDE /* Preview Content */,
@@ -259,6 +262,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				20C843D624E773E4002A2FDE /* CustomPickerView.swift in Sources */,
 				20C843AD24E773C6002A2FDE /* ContentView.swift in Sources */,
 				20C843AB24E773C6002A2FDE /* CustomPickerSwiftUIApp.swift in Sources */,
 			);

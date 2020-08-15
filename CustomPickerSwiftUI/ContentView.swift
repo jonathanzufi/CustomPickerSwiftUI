@@ -8,10 +8,13 @@
 import SwiftUI
 
 struct ContentView: View {
+    
+    @State private var selectedIndex: Int = 0
     var body: some View {
-        Text("Hello, world!")
-            .padding()
+        CustomPickerView(selectedIndex: $selectedIndex)
+            .background(Rectangle().fill(Color(white: 0.75)))
     }
+    
 }
 
 struct ContentView_Previews: PreviewProvider {
