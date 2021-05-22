@@ -24,12 +24,11 @@ struct Category: Hashable {
 
 struct CustomPickerView: View {
     
-    @Binding var selectedIndex: Int
-    @State private var currentIndex: Int = 0
+    @Binding var selectedId: Int
     @Namespace private var ns
     
     init(selectedIndex: Binding<Int>) {
-        _selectedIndex = selectedIndex
+        _selectedId = selectedIndex
         Categories.removeAll()
         Categories.append(Category(id: 0, title: "Atlanta", selected: true))
         Categories.append(Category(id: 1, title: "Las Vegas", selected: false))
@@ -53,7 +52,7 @@ struct CustomPickerView: View {
                     HStack(spacing: 35) {
                         
                         ForEach(Categories, id: \.self) { item in
-                            if item.id == currentIndex {
+                            if item.id == selectedId {
                                 ZStack() {
                                     Text(item.title)
                                         .bold()
@@ -68,11 +67,16 @@ struct CustomPickerView: View {
                                 Text(item.title)
                                     .onTapGesture {
                                         withAnimation {
-                                            currentIndex = item.id
-                                            selectedIndex = currentIndex
-                                            scrollView.scrollTo(item)
+                                            selectedId = item.id
                                         }
                                     }
+                            }
+                        }
+                    }
+                    .onChange(of: selectedId) { _ in
+                        withAnimation {
+                            if let item = Categories.first(where: { $0.id == selectedId }) {
+                                scrollView.scrollTo(item)
                             }
                         }
                     }
